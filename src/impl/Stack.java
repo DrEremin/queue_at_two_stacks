@@ -12,7 +12,7 @@ import interfaces.MyQueue;
 
 public class Stack <T> implements MyQueue<T> {
 
-    public ArrayList<T> stack;
+    protected ArrayList<T> stack;
 
     /**
      * Constructors
