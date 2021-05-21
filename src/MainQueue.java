@@ -44,7 +44,7 @@ public class MainQueue {
 
         System.out.println("integerQueueTwoStacks = " + integerQueueTwoStacks);
 
-        for (int i = 7; i < 10; i++) {
+        for (int i = 8; i < 11; i++) {
             integerQueueTwoStacks.push(i);
         }
         System.out.println("integerQueueTwoStacks = " + integerQueueTwoStacks);

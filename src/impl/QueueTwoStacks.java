@@ -108,15 +108,14 @@ public class QueueTwoStacks<T> implements MyQueue<T> {
                     .reverse()
                     .setCharAt(0, '[');
             string = stringBuilder
-                    .append(tail.toString())
                     .toString()
-                    .replaceAll(" ,", ", ");
+                    .replaceAll(" ,", ", ")
+                    + tail.toString();
             if (tail.isEmpty()) {
                 return string.replace("[[", "");
             } else {
                 return string.replace("[[", ", ");
             }
-
         }
     }
 }
