@@ -22,8 +22,20 @@ public class Stack <T> {
         stack = new ArrayList<>(collection);
     }
 
+    /**
+     * The check of stack at emptiness
+     * @return true if stack is empty else false
+     */
+
     public boolean isEmpty() {
         return stack.size() == 0;
     }
 
+    /**
+     * @return Returns a size of this stack
+     */
+
+    public int getSize() {
+        return stack.size();
+    }
 }
