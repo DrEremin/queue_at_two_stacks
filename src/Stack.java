@@ -66,6 +66,14 @@ public class Stack <T> {
         return (data != null) ? stack.add(data) : false;
     }
 
+    /**
+     * This method remove an element from top of stack
+     * @param defaultData This is link at object which using
+     * for replacement null
+     * @return Returns either link at object which removed
+     * from top of stack or link at object by default
+     */
+
     public T pop(T defaultData) {
         int lastIndex;
         if ((lastIndex = stack.size() - 1) < 0) {
@@ -76,4 +84,11 @@ public class Stack <T> {
                 orElse(defaultData);
     }
 
+    /**
+     * This method remove all elements from the stack
+     */
+
+    public void clear() {
+        stack.clear();
+    }
 }

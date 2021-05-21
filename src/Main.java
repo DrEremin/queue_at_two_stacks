@@ -30,6 +30,12 @@ public class Main {
         System.out.println();
         for (int i = stackString.getSize() + 1; i >= 0; i--) {
             System.out.print("[" + stackString.pop("null") + "] ");
+            stackInt.push(i);
         }
+        System.out.println("\nWere added elements to stackInt:");
+        System.out.println("stackInt = " + stackInt);
+        stackInt.clear();
+        System.out.println("The stackInt was cleared:");
+        System.out.println("stackInt = " + stackInt);
     }
 }
