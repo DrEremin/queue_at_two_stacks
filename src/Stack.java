@@ -1,3 +1,7 @@
+/**
+ * This class implements a stack based on ArrayList<T>
+ */
+
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -16,6 +20,10 @@ public class Stack <T> {
 
     Stack(Collection<T> collection) {
         stack = new ArrayList<>(collection);
+    }
+
+    public boolean isEmpty() {
+        return stack.size() == 0;
     }
 
 }
