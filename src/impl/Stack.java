@@ -68,7 +68,7 @@ public class Stack <T> implements MyQueue<T> {
 
     @Override
     public boolean push(T data) {
-        return (data != null) ? stack.add(data) : false;
+        return data != null && stack.add(data);
     }
 
     /**

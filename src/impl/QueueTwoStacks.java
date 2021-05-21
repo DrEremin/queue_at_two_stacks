@@ -53,14 +53,16 @@ public class QueueTwoStacks<T> implements MyQueue<T> {
     }
 
     /**
-     * It doesn't implement
-     * @param data
-     * @return
+     * This method insert data to tail of queue
+     * @param data The data which must be inserted to
+     * tail of queue
+     * @return Returns true if element successfully
+     * inserted to tail of queue
      */
 
     @Override
     public boolean push(T data) {
-        return true;
+        return data != null && tail.push(data);
     }
 
     /**
