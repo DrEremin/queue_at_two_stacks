@@ -61,7 +61,7 @@ public class Stack <T> {
      * inserted to stack
      */
 
-    public boolean pop(T data) {
+    public boolean push(T data) {
         return (data != null) ? stack.add(data) : false;
     }
 }

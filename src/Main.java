@@ -12,12 +12,12 @@ public class Main {
         System.out.println("A content of stacks:");
         System.out.println("stack1 = " + stack1);
         System.out.println("stack2 = " + stack2);
-        stack1.pop(1);
-        stack1.pop(2);
-        stack1.pop(3);
-        stack2.pop("Second string");
-        stack2.pop("Third string");
-        stack2.pop(null);
+        stack1.push(1);
+        stack1.push(2);
+        stack1.push(3);
+        stack2.push("Second string");
+        stack2.push("Third string");
+        stack2.push(null);
         System.out.println("Were added elements to stacks:");
         System.out.println("stack1 = " + stack1);
         System.out.println("stack2 = " + stack2);
