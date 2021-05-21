@@ -3,29 +3,31 @@
  * @param T This type of runtime is type of elements
  * contains in stack
  */
+package impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Optional;
+import interfaces.MyQueue;
 
-public class Stack <T> {
+public class Stack <T> implements MyQueue<T> {
 
-    ArrayList<T> stack;
+    public ArrayList<T> stack;
 
     /**
      * Constructors
      */
 
-    Stack () {
+    public Stack () {
         stack = new ArrayList<>();
     }
 
-    Stack (T data) {
+    public Stack (T data) {
         stack = new ArrayList<>();
         stack.add(data);
     }
 
-    Stack(Collection<T> collection) {
+    public Stack(Collection<T> collection) {
         stack = new ArrayList<>(collection);
     }
 
@@ -34,6 +36,7 @@ public class Stack <T> {
      * @return true if stack is empty else false
      */
 
+    @Override
     public boolean isEmpty() {
         return stack.size() == 0;
     }
@@ -42,6 +45,7 @@ public class Stack <T> {
      * @return Returns a size of this stack
      */
 
+    @Override
     public int getSize() {
         return stack.size();
     }
@@ -62,6 +66,7 @@ public class Stack <T> {
      * inserted to stack
      */
 
+    @Override
     public boolean push(T data) {
         return (data != null) ? stack.add(data) : false;
     }
@@ -74,6 +79,7 @@ public class Stack <T> {
      * from top of stack or link at object by default
      */
 
+    @Override
     public T pop(T defaultData) {
         int lastIndex;
         if ((lastIndex = stack.size() - 1) < 0) {
@@ -88,6 +94,7 @@ public class Stack <T> {
      * This method remove all elements from the stack
      */
 
+    @Override
     public void clear() {
         stack.clear();
     }

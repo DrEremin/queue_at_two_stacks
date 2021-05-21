@@ -1,6 +1,6 @@
-import java.util.ArrayList;
+import impl.Stack;
 
-public class Main {
+public class MainStack {
     public static void main(String[] args) {
 
         Stack<Integer> stackInt = new Stack<>();
@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Check of stack at emptiness:");
         System.out.println("stackInt " + stackString.isEmpty());
         System.out.println("stackString " + stackString.isEmpty());
-        System.out.println("Stack size determination:");
+        System.out.println("impl.Stack size determination:");
         System.out.println("stackInt " + stackInt.getSize());
         System.out.println("stackString " + stackString.getSize());
         System.out.println("A content of stacks:");
