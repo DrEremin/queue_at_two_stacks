@@ -9,5 +9,8 @@ public class Main {
         System.out.println("Stack size determination ");
         System.out.println("stack1 " + stack1.getSize());
         System.out.println("stack2 " + stack2.getSize());
+        System.out.println("A content of stacks");
+        System.out.println("stack1 = " + stack1);
+        System.out.println("stack2 = " + stack2);
     }
 }

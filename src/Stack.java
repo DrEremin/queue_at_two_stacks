@@ -1,5 +1,7 @@
 /**
  * This class implements a stack based on ArrayList<T>
+ * @param T This type of runtime is type of elements
+ * contains in stack
  */
 
 import java.util.ArrayList;
@@ -8,6 +10,10 @@ import java.util.Collection;
 public class Stack <T> {
 
     ArrayList<T> stack;
+
+    /**
+     * Constructors
+     */
 
     Stack () {
         stack = new ArrayList<>();
@@ -37,5 +43,14 @@ public class Stack <T> {
 
     public int getSize() {
         return stack.size();
+    }
+
+    /**
+     * @return Returns a string representation this stack
+     */
+
+    @Override
+    public String toString() {
+        return stack.toString();
     }
 }
