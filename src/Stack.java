@@ -6,6 +6,7 @@
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Optional;
 
 public class Stack <T> {
 
@@ -64,4 +65,15 @@ public class Stack <T> {
     public boolean push(T data) {
         return (data != null) ? stack.add(data) : false;
     }
+
+    public T pop(T defaultData) {
+        int lastIndex;
+        if ((lastIndex = stack.size() - 1) < 0) {
+            return defaultData;
+        }
+        return Optional.ofNullable(
+                stack.remove(lastIndex)).
+                orElse(defaultData);
+    }
+
 }

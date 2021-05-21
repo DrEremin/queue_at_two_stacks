@@ -1,25 +1,35 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
-        Stack<Integer> stack1 = new Stack<>();
-        Stack<String> stack2 = new Stack<>("First string");
+        Stack<Integer> stackInt = new Stack<>();
+        Stack<String> stackString = new Stack<>("First string");
         System.out.println("Check of stack at emptiness:");
-        System.out.println("stack1 " + stack1.isEmpty());
-        System.out.println("stack2 " + stack2.isEmpty());
+        System.out.println("stackInt " + stackString.isEmpty());
+        System.out.println("stackString " + stackString.isEmpty());
         System.out.println("Stack size determination:");
-        System.out.println("stack1 " + stack1.getSize());
-        System.out.println("stack2 " + stack2.getSize());
+        System.out.println("stackInt " + stackInt.getSize());
+        System.out.println("stackString " + stackString.getSize());
         System.out.println("A content of stacks:");
-        System.out.println("stack1 = " + stack1);
-        System.out.println("stack2 = " + stack2);
-        stack1.push(1);
-        stack1.push(2);
-        stack1.push(3);
-        stack2.push("Second string");
-        stack2.push("Third string");
-        stack2.push(null);
+        System.out.println("stackInt = " + stackInt);
+        System.out.println("stackString = " + stackString);
+        stackInt.push(1);
+        stackInt.push(2);
+        stackInt.push(3);
+        stackString.push("Second string");
+        stackString.push("Third string");
+        stackString.push(null);
         System.out.println("Were added elements to stacks:");
-        System.out.println("stack1 = " + stack1);
-        System.out.println("stack2 = " + stack2);
+        System.out.println("stackInt = " + stackInt);
+        System.out.println("stackString = " + stackString);
+        System.out.println("Calls of method pop() for both stacks:");
+        for (int i = stackInt.getSize() + 1; i >= 0; i--) {
+            System.out.print("[" + stackInt.pop(7777) + "] ");
+        }
+        System.out.println();
+        for (int i = stackString.getSize() + 1; i >= 0; i--) {
+            System.out.print("[" + stackString.pop("null") + "] ");
+        }
     }
 }
