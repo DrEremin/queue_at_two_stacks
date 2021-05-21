@@ -66,14 +66,21 @@ public class QueueTwoStacks<T> implements MyQueue<T> {
     }
 
     /**
-     * It doesn't implement
-     * @param defaultData
-     * @return
+     * This method remove an element from head of queue
+     * @param defaultData This is link at object which using
+     * for replacement null
+     * @return Returns either link at object which removed
+     * from head of queue or link at object by default
      */
 
     @Override
     public T pop(T defaultData) {
-        return defaultData;
+        if (head.isEmpty()) {
+            while (!tail.isEmpty()) {
+                head.push(tail.pop(defaultData));
+            }
+        }
+        return head.pop(defaultData);
     }
 
     /**
@@ -91,6 +98,25 @@ public class QueueTwoStacks<T> implements MyQueue<T> {
 
     @Override
     public String toString() {
-        return (tail.toString() + head.toString()).replace("][", "");
+        if (head.isEmpty()) {
+            return (tail.toString() + head.toString())
+                    .replace("][", "");
+        } else {
+            StringBuilder stringBuilder = new StringBuilder(head.toString());
+            String string;
+            stringBuilder
+                    .reverse()
+                    .setCharAt(0, '[');
+            string = stringBuilder
+                    .append(tail.toString())
+                    .toString()
+                    .replaceAll(" ,", ", ");
+            if (tail.isEmpty()) {
+                return string.replace("[[", "");
+            } else {
+                return string.replace("[[", ", ");
+            }
+
+        }
     }
 }
