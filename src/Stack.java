@@ -53,4 +53,15 @@ public class Stack <T> {
     public String toString() {
         return stack.toString();
     }
+
+    /**
+     * This method insert data to top of stack
+     * @param data The data which must be inserted to stack
+     * @return Returns true if element successfully
+     * inserted to stack
+     */
+
+    public boolean pop(T data) {
+        return (data != null) ? stack.add(data) : false;
+    }
 }
