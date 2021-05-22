@@ -84,12 +84,13 @@ public class QueueTwoStacks<T> implements MyQueue<T> {
     }
 
     /**
-     * It doesn't implement
+     * This method remove all elements from the queue
      */
 
     @Override
     public void clear() {
-
+        tail.clear();
+        head.clear();
     }
 
     /**
